@@ -1,5 +1,8 @@
 FROM openjdk:8-alpine
 
+ADD init_container.sh /bin/init_container.sh
+ADD sshd_config /etc/ssh/
+
 # Enable and conigure SSH:
 #
 RUN apk add --update openssh-server \
